@@ -8,7 +8,7 @@ type self = {
 	DataStore :DataStore,
 };
 
-local Handler = require(script.Handler);
+local Handler = require(script.DataHandler);
 
 function Blueprint.GetHandler(self :Manager, Key :any) :Handler
 	return Handler(self.DataStore, Key);
