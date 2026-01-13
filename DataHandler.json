@@ -1,0 +1,9 @@
+{
+  "Service":"ServerStorage",
+  "Path":"Objects.DataStore",
+  "Dependencies":["DataStore"],
+  "Display":{
+    "Show":false,
+    "Name":"DataHandler",
+  }
+}
