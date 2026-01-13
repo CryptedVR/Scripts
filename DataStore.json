@@ -4,6 +4,6 @@
   "Dependencies":["DataHandler"],
   "Display":{
     "Show":true,
-    "Name":"DataStore",
+    "Name":"DataStore"
   }
 }
