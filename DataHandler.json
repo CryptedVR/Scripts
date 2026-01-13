@@ -4,6 +4,6 @@
   "Dependencies":["Promise"],
   "Display":{
     "Show":false,
-    "Name":"DataHandler",
+    "Name":"DataHandler"
   }
 }
