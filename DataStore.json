@@ -2,6 +2,7 @@
   "Service":"ServerStorage",
   "Path":"Objects",
   "Dependencies":["DataHandler"],
+  "Version":0,
   "Display":{
     "Show":true,
     "Name":"DataStore"
