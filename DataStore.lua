@@ -1,15 +1,21 @@
 --- SERVICES
 local DSS = game:GetService("DataStoreService");
 
+--- DIRECTORIES
+
+--- DEPENDENCIES
+local Handler = require(script.DataHandler);
+
+--- STRUCTURES
 local Blueprint = {};
 Blueprint.__index = Blueprint;
 
+--- TYPES
 type self = {
 	DataStore :DataStore,
 };
 
-local Handler = require(script.DataHandler);
-
+--- FUNCTIONS
 function Blueprint.GetHandler(self :Manager, Key :any) :Handler
 	return Handler(self.DataStore, Key);
 end;
