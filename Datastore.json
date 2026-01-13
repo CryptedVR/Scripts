@@ -1,0 +1,9 @@
+{
+  "Service":"ServerStorage",
+  "Path":"Objects",
+  "Dependencies":["DataHandler"],
+  "Display":{
+    "Show":true,
+    "Name":"DataStore",
+  }
+}
