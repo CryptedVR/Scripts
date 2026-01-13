@@ -1,6 +1,17 @@
+--- SERVICES
+local SS = game:GetService("ServerStorage");
+
+--- DIRECTORIES
+local Dependencies = SS.Dependencies;
+
+--- DEPENDENCIES
+local Promise = require(Dependencies.Promise);
+
+--- STRUCTURES
 local Blueprint = {};
 Blueprint.__index = Blueprint;
 
+--- TYPES
 type self = {
 	DataStore :DataStore,
 	Success :boolean,
@@ -8,23 +19,7 @@ type self = {
 	Data :any,
 };
 
-function Promise<Result>(Try :() -> (Result)) :(boolean, Result)
-	local Tries :number, Success :boolean, Result :any? = 0, false, nil;
-	
-	while true do
-		Tries += 1;
-		Success, Result = pcall(Try);
-		
-		if Success or Tries >= 5 then
-			break
-		else
-			task.wait(1);
-		end;
-	end;
-	
-	return Success, Result;
-end;
-
+--- FUNCTIONS
 function Blueprint.Save(self :Handler) :boolean
 	local Success = Promise(function()
 		self.DataStore:SetAsync(self.Key, self.Data);
