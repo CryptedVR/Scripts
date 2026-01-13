@@ -1,7 +1,7 @@
 {
   "Service":"ServerStorage",
   "Path":"Objects.DataStore",
-  "Dependencies":["DataStore"],
+  "Dependencies":["Promise"],
   "Display":{
     "Show":false,
     "Name":"DataHandler",
